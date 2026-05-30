@@ -12,7 +12,7 @@
 
   <style>
     :root {
-      --bg: #f8f3ec;
+      --bg: #fbf5ec;
       --bg-soft: #fffaf3;
       --ink: #241b15;
       --muted: #7a6a5f;
@@ -20,8 +20,8 @@
       --brand-dark: #6f482b;
       --cream: #fff6e9;
       --gold: #c99a5c;
-      --glass: rgba(255, 255, 255, 0.56);
-      --shadow: 0 24px 70px rgba(67, 44, 27, 0.16);
+      --glass: rgba(255, 255, 255, 0.66);
+      --shadow: 0 24px 70px rgba(67, 44, 27, 0.14);
       --radius: 28px;
       --nav-height: 76px;
     }
@@ -41,8 +41,8 @@
       font-family: "Inter", sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(circle at top left, rgba(201, 154, 92, 0.22), transparent 35%),
-        linear-gradient(180deg, #fbf5ec 0%, #f6eadc 42%, #fff8ef 100%);
+        radial-gradient(circle at top left, rgba(201, 154, 92, 0.18), transparent 34%),
+        linear-gradient(180deg, #fffaf3 0%, #f6eadc 45%, #fff8ef 100%);
       overflow-x: hidden;
       line-height: 1.6;
     }
@@ -106,10 +106,12 @@
       font-size: clamp(2.3rem, 4vw, 4.4rem);
       letter-spacing: -0.04em;
       margin-bottom: 18px;
+      color: var(--brand-dark);
     }
 
     h3 {
       font-size: clamp(1.45rem, 2vw, 2rem);
+      color: var(--brand-dark);
     }
 
     p {
@@ -150,25 +152,24 @@
       background: linear-gradient(135deg, var(--brand), var(--brand-dark));
       color: #fff;
       font-weight: 800;
-      box-shadow: 0 18px 40px rgba(111, 72, 43, 0.28);
+      box-shadow: 0 18px 40px rgba(111, 72, 43, 0.25);
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     }
 
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 26px 54px rgba(111, 72, 43, 0.34);
+      box-shadow: 0 26px 54px rgba(111, 72, 43, 0.32);
     }
 
     .btn.secondary {
-      background: rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.82);
       backdrop-filter: blur(18px);
-      border-color: rgba(255, 255, 255, 0.46);
-      color: #fff;
-      box-shadow: none;
+      border-color: rgba(159, 107, 66, 0.18);
+      color: var(--brand-dark);
+      box-shadow: 0 14px 34px rgba(67, 44, 27, 0.08);
     }
 
-    /* Navigation */
     .nav {
       position: fixed;
       top: 16px;
@@ -181,25 +182,25 @@
       justify-content: space-between;
       padding: 0 18px 0 24px;
       border-radius: 999px;
-      background: rgba(42, 29, 20, 0.52);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 250, 243, 0.82);
+      border: 1px solid rgba(159, 107, 66, 0.18);
       backdrop-filter: blur(22px);
       z-index: 99;
-      box-shadow: 0 18px 54px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 18px 54px rgba(67, 44, 27, 0.16);
     }
 
     .logo {
       display: flex;
       flex-direction: column;
       line-height: 1;
-      color: #fff;
+      color: var(--brand-dark);
       font-weight: 900;
       letter-spacing: 0.02em;
       white-space: nowrap;
     }
 
     .logo span {
-      color: rgba(255, 255, 255, 0.72);
+      color: var(--muted);
       font-size: 0.72rem;
       margin-top: 5px;
       letter-spacing: 0.17em;
@@ -213,7 +214,7 @@
     }
 
     .nav-links a {
-      color: rgba(255, 255, 255, 0.82);
+      color: var(--brand-dark);
       font-size: 0.9rem;
       font-weight: 700;
       padding: 12px 14px;
@@ -222,8 +223,7 @@
     }
 
     .nav-links a:hover {
-      color: #fff;
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(159, 107, 66, 0.1);
     }
 
     .menu-btn {
@@ -231,14 +231,13 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.28);
-      background: rgba(255, 255, 255, 0.12);
-      color: #fff;
+      border: 1px solid rgba(159, 107, 66, 0.22);
+      background: rgba(159, 107, 66, 0.08);
+      color: var(--brand-dark);
       font-size: 1.25rem;
       cursor: pointer;
     }
 
-    /* Hero */
     .hero {
       min-height: 100svh;
       padding: 0 6vw;
@@ -263,7 +262,7 @@
       opacity: 0;
       transform: scale(1.08);
       animation: heroFade 24s infinite;
-      filter: saturate(0.9) contrast(1.05);
+      filter: saturate(0.92) contrast(1.05);
     }
 
     .hero-bg img:nth-child(2) { animation-delay: 6s; }
@@ -282,9 +281,8 @@
       inset: 0;
       z-index: -2;
       background:
-        radial-gradient(circle at 20% 20%, rgba(255, 230, 194, 0.2), transparent 32%),
-        linear-gradient(90deg, rgba(21, 13, 8, 0.78) 0%, rgba(34, 21, 13, 0.55) 44%, rgba(34, 21, 13, 0.14) 100%),
-        linear-gradient(180deg, rgba(15, 10, 8, 0.25), rgba(15, 10, 8, 0.62));
+        linear-gradient(90deg, rgba(58, 35, 20, 0.72) 0%, rgba(80, 52, 32, 0.44) 48%, rgba(255, 246, 233, 0.12) 100%),
+        linear-gradient(180deg, rgba(40, 24, 14, 0.22), rgba(38, 25, 17, 0.48));
     }
 
     .hero-content {
@@ -300,8 +298,12 @@
       background: #f8d9ae;
     }
 
+    .hero h1 {
+      color: #fff;
+    }
+
     .hero p {
-      color: rgba(255, 255, 255, 0.82);
+      color: rgba(255, 255, 255, 0.86);
       font-size: clamp(1.05rem, 1.7vw, 1.35rem);
       max-width: 650px;
       margin: 24px 0 34px;
@@ -318,35 +320,106 @@
       position: absolute;
       right: 7vw;
       bottom: 9vh;
-      width: min(330px, 82vw);
+      width: min(340px, 82vw);
       padding: 24px;
       border-radius: 26px;
-      background: rgba(255, 255, 255, 0.13);
-      border: 1px solid rgba(255, 255, 255, 0.24);
+      background: rgba(255, 250, 243, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.42);
       backdrop-filter: blur(22px);
-      color: #fff;
-      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+      color: var(--brand-dark);
+      box-shadow: 0 28px 80px rgba(67, 44, 27, 0.22);
     }
 
     .floating-card strong {
       display: block;
       font-size: 1.1rem;
       margin-bottom: 8px;
+      color: var(--brand-dark);
     }
 
     .floating-card p {
       font-size: 0.94rem;
       margin: 0;
-      color: rgba(255, 255, 255, 0.72);
+      color: var(--muted);
     }
 
-    /* Parallax decor */
+    .visual-backboard {
+      position: relative;
+      border-radius: 38px;
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid rgba(159, 107, 66, 0.12);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backdrop-filter: blur(18px);
+    }
+
+    .visual-backboard::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 42%;
+      background: linear-gradient(180deg, rgba(255, 250, 243, 0.08), rgba(255, 250, 243, 0.9));
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .image-bottom-board {
+      position: relative;
+      min-height: 340px;
+      padding: 42px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      border-radius: 34px;
+      background: #fff8ef;
+      box-shadow: var(--shadow);
+    }
+
+    .image-bottom-board img {
+      position: absolute;
+      inset: 0;
+      height: 118%;
+      object-fit: cover;
+      transform: translateY(0) scale(1.04);
+      opacity: 0.72;
+      filter: saturate(0.86) contrast(1.02);
+    }
+
+    .image-bottom-board::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(255, 250, 243, 0.58) 0%, rgba(255, 246, 233, 0.68) 38%, rgba(255, 250, 243, 0.92) 100%),
+        linear-gradient(90deg, rgba(255, 250, 243, 0.96), rgba(255, 250, 243, 0.42));
+      z-index: 1;
+    }
+
+    .image-bottom-board .text {
+      position: relative;
+      z-index: 2;
+      max-width: 560px;
+    }
+
+    .image-bottom-board h3 {
+      font-size: clamp(2rem, 3vw, 3.3rem);
+      color: var(--brand-dark);
+      margin-bottom: 12px;
+    }
+
+    .image-bottom-board p {
+      color: #6c4a33;
+      font-weight: 600;
+    }
+
     .blob {
       position: absolute;
       border-radius: 50%;
       pointer-events: none;
       filter: blur(4px);
-      opacity: 0.55;
+      opacity: 0.5;
       z-index: 1;
       transform: translate3d(0, 0, 0);
     }
@@ -354,7 +427,7 @@
     .blob.one {
       width: 260px;
       height: 260px;
-      background: rgba(201, 154, 92, 0.18);
+      background: rgba(201, 154, 92, 0.16);
       right: -70px;
       top: 120px;
     }
@@ -362,12 +435,11 @@
     .blob.two {
       width: 190px;
       height: 190px;
-      background: rgba(159, 107, 66, 0.13);
+      background: rgba(159, 107, 66, 0.12);
       left: -55px;
       bottom: 80px;
     }
 
-    /* Reveal */
     .reveal {
       opacity: 0;
       transform: translateY(44px);
@@ -379,56 +451,19 @@
       transform: translateY(0);
     }
 
-    /* About */
     .about-grid {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 48px;
-      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      align-items: stretch;
     }
 
     .about-copy {
-      padding: 36px;
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.52);
-      border: 1px solid rgba(255, 255, 255, 0.58);
-      backdrop-filter: blur(18px);
-      box-shadow: var(--shadow);
+      padding: 38px;
     }
 
     .about-copy p + p {
       margin-top: 18px;
-    }
-
-    .about-visual {
-      position: relative;
-      min-height: 560px;
-    }
-
-    .photo-stack {
-      position: absolute;
-      border-radius: 34px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 10px solid rgba(255, 255, 255, 0.55);
-    }
-
-    .photo-stack.big {
-      width: 78%;
-      right: 0;
-      top: 0;
-    }
-
-    .photo-stack.small {
-      width: 54%;
-      left: 0;
-      bottom: 0;
-    }
-
-    .photo-stack img {
-      height: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
     }
 
     .stats {
@@ -441,7 +476,7 @@
     .stat {
       padding: 18px;
       border-radius: 22px;
-      background: rgba(255, 246, 233, 0.72);
+      background: rgba(255, 246, 233, 0.76);
       border: 1px solid rgba(159, 107, 66, 0.14);
     }
 
@@ -460,10 +495,9 @@
       font-weight: 700;
     }
 
-    /* Services */
     .services {
       background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 247, 236, 0.84)),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 247, 236, 0.88)),
         radial-gradient(circle at 80% 5%, rgba(201, 154, 92, 0.18), transparent 28%);
     }
 
@@ -477,8 +511,8 @@
       position: relative;
       overflow: hidden;
       border-radius: 34px;
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(159, 107, 66, 0.12);
       box-shadow: var(--shadow);
       backdrop-filter: blur(18px);
     }
@@ -516,7 +550,6 @@
     .service-card:nth-child(2) .carousel img:nth-child(8) { animation-delay: 21s; }
     .service-card:nth-child(1) .carousel img:nth-child(9),
     .service-card:nth-child(2) .carousel img:nth-child(9) { animation-delay: 24s; }
-    .service-card:nth-child(1) .carousel img:nth-child(10),
     .service-card:nth-child(2) .carousel img:nth-child(10) { animation-delay: 27s; }
 
     @keyframes cardCarousel {
@@ -574,62 +607,58 @@
 
     .addons {
       margin-top: 32px;
-      padding: 28px;
-      border-radius: 30px;
-      background:
-        linear-gradient(135deg, rgba(111, 72, 43, 0.95), rgba(159, 107, 66, 0.88)),
-        radial-gradient(circle at top right, rgba(255, 255, 255, 0.2), transparent 32%);
-      color: #fff;
-      box-shadow: var(--shadow);
+      padding: 0;
+      color: var(--brand-dark);
     }
 
-    .addons h3 {
-      margin-bottom: 18px;
+    .addons .image-bottom-board {
+      min-height: 300px;
     }
 
     .addon-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 14px;
+      margin-top: 24px;
+      position: relative;
+      z-index: 2;
     }
 
     .addon {
       padding: 18px;
       border-radius: 22px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.74);
+      border: 1px solid rgba(159, 107, 66, 0.14);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 14px 34px rgba(67, 44, 27, 0.08);
     }
 
     .addon strong {
       display: block;
       margin-bottom: 4px;
+      color: var(--brand-dark);
     }
 
     .addon span {
-      color: rgba(255, 255, 255, 0.74);
+      color: #6c4a33;
       font-size: 0.9rem;
     }
 
-    /* Booking */
     .booking-card {
       display: grid;
-      grid-template-columns: 1fr 1.05fr;
+      grid-template-columns: 1fr 1fr;
       gap: 34px;
-      align-items: center;
-      padding: 36px;
-      border-radius: 38px;
-      background: rgba(255, 255, 255, 0.62);
-      border: 1px solid rgba(255, 255, 255, 0.74);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
+      align-items: stretch;
+      padding: 0;
     }
 
     .booking-panel {
-      padding: 30px;
-      border-radius: 30px;
-      background:
-        linear-gradient(135deg, #fff8ed, #f4dec1);
-      border: 1px solid rgba(159, 107, 66, 0.14);
+      padding: 38px;
+      border-radius: 34px;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(159, 107, 66, 0.12);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
     }
 
     .booking-panel ul {
@@ -660,23 +689,18 @@
       margin-top: 26px;
     }
 
-    .booking-actions .btn.secondary {
-      color: var(--brand-dark);
-      background: #fff;
-      border-color: rgba(159, 107, 66, 0.14);
-      box-shadow: 0 14px 34px rgba(67, 44, 27, 0.08);
-    }
-
     .discounts {
       display: grid;
       gap: 14px;
+      align-content: stretch;
     }
 
     .discount {
-      padding: 20px;
+      padding: 22px;
       border-radius: 24px;
-      background: rgba(255, 255, 255, 0.68);
+      background: rgba(255, 255, 255, 0.78);
       border: 1px solid rgba(159, 107, 66, 0.12);
+      box-shadow: 0 14px 40px rgba(67, 44, 27, 0.08);
     }
 
     .discount strong {
@@ -686,20 +710,14 @@
       font-size: 1.02rem;
     }
 
-    /* Testimonials */
-    .testimonials {
-      padding-left: 0;
-      padding-right: 0;
-      background: #2d2018;
-      color: #fff;
+    .reviews-backboard {
+      background:
+        linear-gradient(180deg, #fffaf3 0%, #f5e5d0 100%);
+      color: var(--brand-dark);
     }
 
-    .testimonials .container {
-      padding: 0 6vw;
-    }
-
-    .testimonials p {
-      color: rgba(255, 255, 255, 0.72);
+    .reviews-visual {
+      margin-bottom: 52px;
     }
 
     .marquee-wrap {
@@ -726,26 +744,27 @@
       min-height: 182px;
       padding: 24px;
       border-radius: 26px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(159, 107, 66, 0.14);
+      box-shadow: 0 16px 42px rgba(67, 44, 27, 0.1);
       backdrop-filter: blur(16px);
     }
 
     .stars {
-      color: #ffd88d;
+      color: #b57939;
       letter-spacing: 0.08em;
       margin-bottom: 12px;
     }
 
     .review-card p {
-      color: rgba(255, 255, 255, 0.78);
+      color: #6c4a33;
       font-size: 0.95rem;
     }
 
     .review-card strong {
       display: block;
       margin-top: 14px;
-      color: #fff;
+      color: var(--brand-dark);
     }
 
     @keyframes scrollLeft {
@@ -758,7 +777,6 @@
       to { transform: translateX(0); }
     }
 
-    /* FAQs */
     .faq-grid {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
@@ -769,11 +787,12 @@
     .faq-note {
       position: sticky;
       top: 120px;
-      padding: 30px;
-      border-radius: 30px;
-      background: rgba(255, 255, 255, 0.62);
-      border: 1px solid rgba(255, 255, 255, 0.74);
-      box-shadow: var(--shadow);
+      padding: 0;
+    }
+
+    .faq-note .image-bottom-board {
+      min-height: 480px;
+      align-items: center;
     }
 
     .accordion {
@@ -784,7 +803,7 @@
     .faq-item {
       border-radius: 24px;
       overflow: hidden;
-      background: rgba(255, 255, 255, 0.72);
+      background: rgba(255, 255, 255, 0.78);
       border: 1px solid rgba(159, 107, 66, 0.13);
       box-shadow: 0 12px 34px rgba(67, 44, 27, 0.08);
     }
@@ -835,10 +854,9 @@
       transform: rotate(45deg);
     }
 
-    /* Contact */
     .contact {
       background:
-        radial-gradient(circle at 10% 20%, rgba(201, 154, 92, 0.18), transparent 25%),
+        radial-gradient(circle at 10% 20%, rgba(201, 154, 92, 0.16), transparent 25%),
         linear-gradient(180deg, #fff8ef, #f3e4d0);
     }
 
@@ -852,8 +870,8 @@
     .contact-info {
       padding: 34px;
       border-radius: 34px;
-      background: rgba(255, 255, 255, 0.66);
-      border: 1px solid rgba(255, 255, 255, 0.76);
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(159, 107, 66, 0.13);
       box-shadow: var(--shadow);
       backdrop-filter: blur(18px);
     }
@@ -882,7 +900,7 @@
       border-radius: 34px;
       overflow: hidden;
       box-shadow: var(--shadow);
-      border: 10px solid rgba(255, 255, 255, 0.62);
+      border: 10px solid rgba(255, 255, 255, 0.72);
     }
 
     .map iframe {
@@ -896,12 +914,12 @@
     footer {
       padding: 34px 6vw;
       text-align: center;
-      background: #2d2018;
-      color: rgba(255, 255, 255, 0.68);
+      background: #fff8ef;
+      color: var(--muted);
       font-size: 0.92rem;
+      border-top: 1px solid rgba(159, 107, 66, 0.12);
     }
 
-    /* Mobile */
     @media (max-width: 980px) {
       .nav {
         height: 68px;
@@ -919,8 +937,8 @@
         width: min(320px, calc(100vw - 28px));
         padding: 12px;
         border-radius: 24px;
-        background: rgba(42, 29, 20, 0.92);
-        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: rgba(255, 250, 243, 0.96);
+        border: 1px solid rgba(159, 107, 66, 0.16);
         backdrop-filter: blur(18px);
         flex-direction: column;
         align-items: stretch;
@@ -928,6 +946,7 @@
         transform: translateY(-8px);
         pointer-events: none;
         transition: 0.25s ease;
+        box-shadow: var(--shadow);
       }
 
       .nav-links.open {
@@ -958,10 +977,6 @@
         grid-template-columns: 1fr;
       }
 
-      .about-visual {
-        min-height: 480px;
-      }
-
       .services-grid {
         grid-template-columns: 1fr;
       }
@@ -973,6 +988,10 @@
       .faq-note {
         position: relative;
         top: auto;
+      }
+
+      .faq-note .image-bottom-board {
+        min-height: 360px;
       }
     }
 
@@ -1015,15 +1034,16 @@
       }
 
       .about-copy,
-      .booking-card,
       .booking-panel,
       .contact-info {
         padding: 24px;
         border-radius: 26px;
       }
 
-      .about-visual {
-        min-height: 390px;
+      .image-bottom-board {
+        min-height: 320px;
+        padding: 28px;
+        border-radius: 28px;
       }
 
       .stats {
@@ -1122,7 +1142,7 @@
       <div class="blob two parallax" data-speed="-0.08"></div>
 
       <div class="container about-grid">
-        <div class="about-copy reveal">
+        <div class="about-copy visual-backboard reveal">
           <div class="eyebrow">About Us</div>
           <h2>A private space made for genuine relaxation.</h2>
           <p>
@@ -1148,12 +1168,13 @@
           </div>
         </div>
 
-        <div class="about-visual reveal">
-          <div class="photo-stack big parallax" data-speed="0.1">
-            <img src="https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg" alt="Clean and quiet spa massage environment">
-          </div>
-          <div class="photo-stack small parallax" data-speed="-0.13">
-            <img src="https://i.pinimg.com/736x/19/1e/83/191e837a24d9e5efd7f015539b78c373.jpg" alt="Comfortable foot bath relaxation setting">
+        <div class="image-bottom-board reveal parallax" data-speed="0.08">
+          <img src="https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg" alt="Massage wellness background">
+          <div class="text">
+            <h3>Quiet rooms. Gentle care. Natural comfort.</h3>
+            <p>
+              A clean, bright spa atmosphere with soft massage imagery and warm brown typography creates a peaceful first impression.
+            </p>
           </div>
         </div>
       </div>
@@ -1232,23 +1253,30 @@
         </div>
 
         <div class="addons reveal">
-          <h3>Enhancements & In-Store Offers</h3>
-          <div class="addon-grid">
-            <div class="addon">
-              <strong>Meridian Therapy</strong>
-              <span>Add $10</span>
-            </div>
-            <div class="addon">
-              <strong>Deeper Tissue</strong>
-              <span>Add $10</span>
-            </div>
-            <div class="addon">
-              <strong>Card Fee</strong>
-              <span>Add $3 when paying by card</span>
-            </div>
-            <div class="addon">
-              <strong>Birthday Visit</strong>
-              <span>$10 off for same-day birthdays</span>
+          <div class="image-bottom-board parallax" data-speed="0.06">
+            <img src="https://i.pinimg.com/736x/86/47/ef/8647ef5b51553a8e57ca32e6b2ec74f0.jpg" alt="Therapy massage enhancement background">
+            <div class="text">
+              <h3>Enhancements & In-Store Offers</h3>
+              <p>Choose optional upgrades and enjoy available visit rewards.</p>
+
+              <div class="addon-grid">
+                <div class="addon">
+                  <strong>Meridian Therapy</strong>
+                  <span>Add $10</span>
+                </div>
+                <div class="addon">
+                  <strong>Deeper Tissue</strong>
+                  <span>Add $10</span>
+                </div>
+                <div class="addon">
+                  <strong>Card Fee</strong>
+                  <span>Add $3 when paying by card</span>
+                </div>
+                <div class="addon">
+                  <strong>Birthday Visit</strong>
+                  <span>$10 off for same-day birthdays</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1278,29 +1306,38 @@
           </div>
         </div>
 
-        <div class="discounts">
-          <div class="discount">
-            <strong>Couples Visit Offer</strong>
-            <p>Couples who come in together for massage can receive $10 off.</p>
-          </div>
-          <div class="discount">
-            <strong>Birthday Offer</strong>
-            <p>Guests visiting on their birthday can receive $10 off the same day.</p>
-          </div>
-          <div class="discount">
-            <strong>Review Reward</strong>
-            <p>Scan the store QR code and leave a positive review. Bring your review record on your second visit to receive $10 off.</p>
+        <div class="image-bottom-board parallax" data-speed="0.05">
+          <img src="https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg" alt="Foot bath and relaxation background">
+          <div class="text">
+            <h3>Special Visit Rewards</h3>
+            <div class="discounts">
+              <div class="discount">
+                <strong>Couples Visit Offer</strong>
+                <p>Couples who come in together for massage can receive $10 off.</p>
+              </div>
+              <div class="discount">
+                <strong>Birthday Offer</strong>
+                <p>Guests visiting on their birthday can receive $10 off the same day.</p>
+              </div>
+              <div class="discount">
+                <strong>Review Reward</strong>
+                <p>Scan the store QR code and leave a positive review. Bring your review record on your second visit to receive $10 off.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="testimonials" id="reviews">
+    <section class="reviews-backboard" id="reviews">
       <div class="container">
-        <div class="section-head center reveal">
-          <div class="eyebrow">Testimonials</div>
-          <h2>Guests leave feeling lighter.</h2>
-          <p>Realistic guest-style reviews that reflect a calm, comfortable, and relaxing spa experience.</p>
+        <div class="image-bottom-board reviews-visual reveal parallax" data-speed="0.06">
+          <img src="https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg" alt="Massage review background">
+          <div class="text">
+            <div class="eyebrow">Testimonials</div>
+            <h3>Guests leave feeling lighter.</h3>
+            <p>Realistic guest-style reviews that reflect a calm, comfortable, and relaxing spa experience.</p>
+          </div>
         </div>
       </div>
 
@@ -1338,11 +1375,14 @@
     <section id="faq">
       <div class="container faq-grid">
         <div class="faq-note reveal">
-          <div class="eyebrow">FAQs</div>
-          <h2>Before your visit.</h2>
-          <p>
-            A few helpful answers so you can arrive relaxed and ready for your session.
-          </p>
+          <div class="image-bottom-board parallax" data-speed="0.05">
+            <img src="https://i.pinimg.com/736x/19/1e/83/191e837a24d9e5efd7f015539b78c373.jpg" alt="Relaxing foot bath FAQ background">
+            <div class="text">
+              <div class="eyebrow">FAQs</div>
+              <h3>Before your visit.</h3>
+              <p>A few helpful answers so you can arrive relaxed and ready for your session.</p>
+            </div>
+          </div>
         </div>
 
         <div class="accordion reveal">
